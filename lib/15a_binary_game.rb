@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop: disable Layout/LineLength
-
 # require_relative '../lib/15c_random_number'
 # require_relative '../lib/15b_binary_search'
 
@@ -35,7 +33,7 @@ class BinaryGame
   end
 
   def verify_input(min, max, input)
-    return input if input.between?(min, max)
+    input if input.between?(min, max)
   end
 
   def update_random_number
@@ -59,7 +57,7 @@ class BinaryGame
   def display_turn_order(binary_search)
     binary_search.make_guess
     @guess_count += 1
-    display_guess(binary_search)
+    # display_guess(binary_search)
     binary_search.update_range
   end
 
@@ -99,4 +97,3 @@ class BinaryGame
     end
   end
 end
-# rubocop: enable Layout/LineLength
